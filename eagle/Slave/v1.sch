@@ -5464,6 +5464,39 @@ Source: YH-55-10.pdf</description>
 <rectangle x1="4.445" y1="-1.905" x2="8.255" y2="1.905" layer="42"/>
 <rectangle x1="-4.445" y1="0" x2="4.445" y2="6.985" layer="43"/>
 </package>
+<package name="RJ12-STRAIGHT-WIEGAND">
+<wire x1="-6.877" y1="9.549" x2="6.877" y2="9.549" width="0.2032" layer="21"/>
+<wire x1="6.877" y1="-9.052" x2="-6.877" y2="-9.052" width="0.2032" layer="21"/>
+<wire x1="-6.877" y1="-9.052" x2="-6.877" y2="9.549" width="0.2032" layer="21"/>
+<wire x1="6.877" y1="9.549" x2="6.877" y2="-9.052" width="0.2032" layer="21"/>
+<pad name="I/O" x="0.635" y="5.08" drill="0.9" diameter="1.4"/>
+<pad name="DAT1" x="-0.635" y="7.62" drill="0.9" diameter="1.4"/>
+<pad name="DAT0" x="-1.905" y="5.08" drill="0.9" diameter="1.4"/>
+<pad name="PWM" x="1.905" y="7.62" drill="0.9" diameter="1.4"/>
+<pad name="+12V" x="-3.175" y="7.62" drill="0.9" diameter="1.4"/>
+<pad name="GND" x="3.175" y="5.08" drill="0.9" diameter="1.4"/>
+<text x="2.2225" y="2.8575" size="0.8128" layer="21" ratio="4">GND</text>
+<text x="-0.3175" y="2.8575" size="0.8128" layer="21" ratio="4">I/O</text>
+<text x="2.8575" y="7.3025" size="0.8128" layer="21" ratio="4">PWM</text>
+<text x="-1.27" y="8.5725" size="0.8128" layer="21" ratio="4">DAT1</text>
+<text x="-6.0325" y="7.3025" size="0.8128" layer="21" ratio="4">12V</text>
+<text x="-4.7625" y="2.8575" size="0.8128" layer="21" ratio="4">DAT0</text>
+<rectangle x1="6.95" y1="-6.755" x2="7.875" y2="-5.612" layer="21"/>
+<rectangle x1="-7.875" y1="-6.755" x2="-6.95" y2="-5.612" layer="21"/>
+<rectangle x1="-8.0693" y1="-6.8272" x2="7.9507" y2="6.7728" layer="150" rot="R90"/>
+<hole x="-5.08" y="-1.27" drill="3.2512"/>
+<hole x="5.08" y="-1.27" drill="3.2512"/>
+</package>
+<package name="LED-TRICOLOR-THROUGHHOLE">
+<wire x1="-3.3" y1="2" x2="-3.3" y2="-2" width="0.127" layer="21"/>
+<wire x1="-3.3" y1="-2" x2="-3.3" y2="2" width="0.127" layer="21" curve="292.619865"/>
+<pad name="GND" x="-1" y="0" drill="1" rot="R90"/>
+<pad name="GRN" x="1" y="0" drill="1" rot="R90"/>
+<pad name="BLU" x="3" y="0" drill="1" rot="R90"/>
+<pad name="RED" x="-3" y="0" drill="1" rot="R270"/>
+<text x="-2.54" y="3.81" size="1.27" layer="25">&gt;Name</text>
+<text x="-2.54" y="-5.08" size="1.27" layer="27">&gt;Value</text>
+</package>
 </packages>
 <symbols>
 <symbol name="RJ12">
@@ -5560,6 +5593,71 @@ Source: YH-55-10.pdf</description>
 <text x="-3.81" y="-5.08" size="1.27" layer="96" font="vector">&gt;VALUE</text>
 <pin name="P$1" x="-5.08" y="0" visible="off" length="short"/>
 <pin name="P$2" x="5.08" y="0" visible="off" length="short" rot="R180"/>
+</symbol>
+<symbol name="LED-RGB">
+<wire x1="6.35" y1="1.778" x2="5.08" y2="-0.254" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-0.254" x2="3.81" y2="1.778" width="0.254" layer="94"/>
+<wire x1="6.35" y1="-0.254" x2="5.08" y2="-0.254" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-0.254" x2="3.81" y2="-0.254" width="0.254" layer="94"/>
+<wire x1="6.35" y1="1.778" x2="3.81" y2="1.778" width="0.254" layer="94"/>
+<wire x1="3.048" y1="1.524" x2="2.159" y2="0.635" width="0.1524" layer="94"/>
+<wire x1="3.81" y1="0.762" x2="2.921" y2="-0.127" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="1.778" x2="0" y2="-0.254" width="0.254" layer="94"/>
+<wire x1="0" y1="-0.254" x2="-1.27" y2="1.778" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-0.254" x2="0" y2="-0.254" width="0.254" layer="94"/>
+<wire x1="0" y1="-0.254" x2="-1.27" y2="-0.254" width="0.254" layer="94"/>
+<wire x1="1.27" y1="1.778" x2="-1.27" y2="1.778" width="0.254" layer="94"/>
+<wire x1="-2.032" y1="1.524" x2="-2.921" y2="0.635" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="0.762" x2="-2.159" y2="-0.127" width="0.1524" layer="94"/>
+<wire x1="-3.81" y1="1.778" x2="-5.08" y2="-0.254" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-0.254" x2="-6.35" y2="1.778" width="0.254" layer="94"/>
+<wire x1="-3.81" y1="-0.254" x2="-5.08" y2="-0.254" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-0.254" x2="-6.35" y2="-0.254" width="0.254" layer="94"/>
+<wire x1="-3.81" y1="1.778" x2="-6.35" y2="1.778" width="0.254" layer="94"/>
+<wire x1="-7.112" y1="1.524" x2="-8.001" y2="0.635" width="0.1524" layer="94"/>
+<wire x1="-6.35" y1="0.762" x2="-7.239" y2="-0.127" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="2.54" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="5.08" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="0" width="0.1524" layer="94"/>
+<circle x="-5.08" y="2.54" radius="0.1796" width="0.254" layer="94"/>
+<circle x="0" y="2.54" radius="0.1796" width="0.254" layer="94"/>
+<text x="-2.54" y="3.302" size="1.778" layer="95">&gt;NAME</text>
+<text x="-2.54" y="5.461" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="CGREEN" x="5.08" y="-2.54" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="CBLUE" x="0" y="-2.54" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="CRED" x="-5.08" y="-2.54" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="A2" x="-5.08" y="5.08" visible="pad" length="middle" direction="pas" rot="R270"/>
+<polygon width="0.1524" layer="94">
+<vertex x="2.032" y="1.016"/>
+<vertex x="1.778" y="0.254"/>
+<vertex x="2.54" y="0.508"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="2.794" y="0.254"/>
+<vertex x="2.54" y="-0.508"/>
+<vertex x="3.302" y="-0.254"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="-3.048" y="1.016"/>
+<vertex x="-3.302" y="0.254"/>
+<vertex x="-2.54" y="0.508"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="-2.286" y="0.254"/>
+<vertex x="-2.54" y="-0.508"/>
+<vertex x="-1.778" y="-0.254"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="-8.128" y="1.016"/>
+<vertex x="-8.382" y="0.254"/>
+<vertex x="-7.62" y="0.508"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="-7.366" y="0.254"/>
+<vertex x="-7.62" y="-0.508"/>
+<vertex x="-6.858" y="-0.254"/>
+</polygon>
 </symbol>
 </symbols>
 <devicesets>
@@ -5674,6 +5772,19 @@ Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</descriptio
 <connect gate="G$1" pin="4" pad="GND2"/>
 <connect gate="G$1" pin="5" pad="+5V"/>
 <connect gate="G$1" pin="6" pad="GND1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="STR-WIEGAND" package="RJ12-STRAIGHT-WIEGAND">
+<connects>
+<connect gate="G$1" pin="1" pad="+12V"/>
+<connect gate="G$1" pin="2" pad="DAT0"/>
+<connect gate="G$1" pin="3" pad="DAT1"/>
+<connect gate="G$1" pin="4" pad="I/O"/>
+<connect gate="G$1" pin="5" pad="PWM"/>
+<connect gate="G$1" pin="6" pad="GND"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -5803,6 +5914,36 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <connects>
 <connect gate="G$1" pin="P$1" pad="P$1"/>
 <connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TOPLED-3" prefix="LED" uservalue="yes">
+<description>&lt;b&gt;OSRAM&lt;/b&gt;&lt;p&gt;
+- &lt;u&gt;Hyper Multi TOPLED® (RGB)&lt;/u&gt;&lt;br&gt;
+LB E673, LV E673, LT E673&lt;br&gt;
+- &lt;u&gt;Power TOPLED® Enhanced optical Power LED (HOP2000)&lt;/u&gt;&lt;br&gt;
+LS E67B, LA E67B, LO E67B, LY E67B&lt;br&gt;
+- &lt;u&gt;Hyper Multi TOPLED® Enhanced optical Power LED (HOP2000 / ATON®)&lt;/u&gt;&lt;br&gt;
+LATB T66B&lt;br&gt;
+- &lt;u&gt;Hyper Multi TOPLED® Hyper-Bright LED&lt;/u&gt;&lt;br&gt;
+LATB T686&lt;br&gt;
+
+&lt;p&gt;
+Source: http://www.osram.convergy.de/</description>
+<gates>
+<gate name="G$1" symbol="LED-RGB" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="LED-TRICOLOR-THROUGHHOLE">
+<connects>
+<connect gate="G$1" pin="A2" pad="GND"/>
+<connect gate="G$1" pin="CBLUE" pad="BLU"/>
+<connect gate="G$1" pin="CGREEN" pad="GRN"/>
+<connect gate="G$1" pin="CRED" pad="RED"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -10525,16 +10666,16 @@ These are standard SMD and PTH capacitors. Normally 10uF, 47uF, and 100uF in ele
 </class>
 </classes>
 <parts>
-<part name="J1" library="lpatiny" deviceset="RJ12" device="STRAIGHT" value="RJ12"/>
+<part name="J1" library="lpatiny" deviceset="RJ12" device="RIGHTANGLE" value="RJ12"/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="R" library="rcl" deviceset="R-EU_" device="R0805" value="1k"/>
 <part name="P+8" library="supply1" deviceset="+12V" device=""/>
-<part name="J2" library="lpatiny" deviceset="RJ12" device="STRAIGHT" value="RJ12"/>
+<part name="J2" library="lpatiny" deviceset="RJ12" device="RIGHTANGLE" value="RJ12"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="SUPPLY6" library="supply1" deviceset="+5V" device=""/>
 <part name="R32" library="rcl" deviceset="R-EU_" device="R0805" value="1k"/>
 <part name="P+12" library="supply1" deviceset="+12V" device=""/>
-<part name="J3" library="lpatiny" deviceset="RJ12" device="STRAIGHT" value="RJ12"/>
+<part name="J3" library="lpatiny" deviceset="RJ12" device="RIGHTANGLE" value="RJ12"/>
 <part name="GND22" library="supply1" deviceset="GND" device=""/>
 <part name="SUPPLY7" library="supply1" deviceset="+5V" device=""/>
 <part name="R33" library="rcl" deviceset="R-EU_" device="R0805" value="1k"/>
@@ -10583,7 +10724,7 @@ These are standard SMD and PTH capacitors. Normally 10uF, 47uF, and 100uF in ele
 <part name="C7" library="rcl" deviceset="C-EU" device="C1206" value="10uF"/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
-<part name="RGB-J1" library="lpatiny" deviceset="RJ12" device="STRAIGHT-RGB" value="RJ12"/>
+<part name="RGB-J1" library="lpatiny" deviceset="RJ12" device="RIGHTANGLE" value="RJ12"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="P+41" library="supply1" deviceset="+5V" device=""/>
 <part name="P+42" library="supply1" deviceset="+12V" device=""/>
@@ -10593,16 +10734,14 @@ These are standard SMD and PTH capacitors. Normally 10uF, 47uF, and 100uF in ele
 <part name="GND33" library="supply1" deviceset="GND" device=""/>
 <part name="GND34" library="supply1" deviceset="GND" device=""/>
 <part name="GND35" library="supply1" deviceset="GND" device=""/>
-<part name="I2C-J1" library="lpatiny" deviceset="RJ12" device="STRAIGHT-I2C" value="RJ12STRAIGHT-I2C"/>
+<part name="I2C-J1" library="lpatiny" deviceset="RJ12" device="RIGHTANGLE" value="RJ12RIGHTANGLE"/>
 <part name="R29" library="resistor" deviceset="R-EU_" device="M0805" value="10K"/>
 <part name="R30" library="resistor" deviceset="R-EU_" device="M0805" value="10K"/>
 <part name="P+18" library="supply1" deviceset="+5V" device=""/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="GND27" library="supply1" deviceset="GND" device=""/>
-<part name="RGB-J2" library="lpatiny" deviceset="RJ12" device="STRAIGHT-RGB" value="RJ12"/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="P+2" library="supply1" deviceset="+5V" device=""/>
-<part name="P+3" library="supply1" deviceset="+12V" device=""/>
 <part name="Q7" library="infineon" deviceset="BSP613P" device="" value="BSP75"/>
 <part name="Q11" library="infineon" deviceset="BSP613P" device="" value="BSP75"/>
 <part name="Q12" library="infineon" deviceset="BSP613P" device="" value="BSP75"/>
@@ -10677,6 +10816,11 @@ These are standard SMD and PTH capacitors. Normally 10uF, 47uF, and 100uF in ele
 <part name="P+15" library="supply1" deviceset="+5V" device=""/>
 <part name="P+19" library="supply1" deviceset="+5V" device=""/>
 <part name="P+20" library="supply1" deviceset="+5V" device=""/>
+<part name="RL2" library="resistor" deviceset="R-EU_" device="M1206" value="1K"/>
+<part name="RL8" library="resistor" deviceset="R-EU_" device="M1206" value="1K"/>
+<part name="RL13" library="resistor" deviceset="R-EU_" device="M1206" value="1K"/>
+<part name="RGB_7-8-13" library="lpatiny" deviceset="TOPLED-3" device=""/>
+<part name="P+3" library="supply1" deviceset="+5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10798,17 +10942,11 @@ These are standard SMD and PTH capacitors. Normally 10uF, 47uF, and 100uF in ele
 <instance part="P+18" gate="1" x="276.86" y="35.56"/>
 <instance part="GND8" gate="1" x="307.34" y="17.78"/>
 <instance part="GND27" gate="1" x="297.18" y="22.86"/>
-<instance part="RGB-J2" gate="G$1" x="375.92" y="292.1" smashed="yes" rot="R90">
-<attribute name="NAME" x="374.015" y="300.355" size="1.778" layer="95" rot="R90"/>
+<instance part="GND2" gate="1" x="439.42" y="297.18" smashed="yes" rot="R90">
+<attribute name="VALUE" x="441.325" y="295.275" size="1.27" layer="96" rot="R90"/>
 </instance>
-<instance part="GND2" gate="1" x="386.08" y="287.02" smashed="yes" rot="R90">
-<attribute name="VALUE" x="387.985" y="285.115" size="1.27" layer="96" rot="R90"/>
-</instance>
-<instance part="P+2" gate="1" x="383.54" y="284.48" smashed="yes" rot="R270">
-<attribute name="VALUE" x="384.175" y="285.115" size="1.27" layer="96" rot="R90"/>
-</instance>
-<instance part="P+3" gate="1" x="368.3" y="287.02" smashed="yes" rot="R90">
-<attribute name="VALUE" x="368.3" y="288.925" size="1.27" layer="96" rot="R90"/>
+<instance part="P+2" gate="1" x="447.04" y="264.16" smashed="yes" rot="R270">
+<attribute name="VALUE" x="447.675" y="264.795" size="1.27" layer="96" rot="R90"/>
 </instance>
 <instance part="Q7" gate="G$1" x="360.68" y="246.38"/>
 <instance part="Q11" gate="G$1" x="373.38" y="246.38"/>
@@ -10995,6 +11133,22 @@ These are standard SMD and PTH capacitors. Normally 10uF, 47uF, and 100uF in ele
 <instance part="P+20" gate="1" x="594.36" y="119.38" smashed="yes">
 <attribute name="VALUE" x="593.725" y="120.015" size="1.27" layer="96" rot="R180"/>
 </instance>
+<instance part="RL2" gate="G$1" x="419.1" y="264.16" smashed="yes" rot="MR180">
+<attribute name="NAME" x="417.195" y="264.5664" size="1.016" layer="95" rot="MR180"/>
+<attribute name="VALUE" x="420.37" y="264.287" size="1.016" layer="96" rot="MR180"/>
+</instance>
+<instance part="RL8" gate="G$1" x="419.1" y="259.08" smashed="yes" rot="MR180">
+<attribute name="NAME" x="417.195" y="259.4864" size="1.016" layer="95" rot="MR180"/>
+<attribute name="VALUE" x="420.37" y="259.207" size="1.016" layer="96" rot="MR180"/>
+</instance>
+<instance part="RL13" gate="G$1" x="419.1" y="254" smashed="yes" rot="MR180">
+<attribute name="NAME" x="417.195" y="254.4064" size="1.016" layer="95" rot="MR180"/>
+<attribute name="VALUE" x="420.37" y="254.127" size="1.016" layer="96" rot="MR180"/>
+</instance>
+<instance part="RGB_7-8-13" gate="G$1" x="429.26" y="259.08" rot="R270"/>
+<instance part="P+3" gate="1" x="378.46" y="289.56" smashed="yes" rot="R270">
+<attribute name="VALUE" x="379.095" y="290.195" size="1.27" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -11042,11 +11196,6 @@ These are standard SMD and PTH capacitors. Normally 10uF, 47uF, and 100uF in ele
 <label x="302.26" y="22.86" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="381" y1="284.48" x2="381" y2="289.56" width="0.1524" layer="91"/>
-<pinref part="RGB-J2" gate="G$1" pin="5"/>
-<pinref part="P+2" gate="1" pin="+5V"/>
-</segment>
-<segment>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="452.12" y1="114.3" x2="452.12" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="P+15" gate="1" pin="+5V"/>
@@ -11092,6 +11241,12 @@ These are standard SMD and PTH capacitors. Normally 10uF, 47uF, and 100uF in ele
 <pinref part="R2" gate="G$1" pin="2"/>
 <pinref part="P+10" gate="1" pin="+5V"/>
 <junction x="472.44" y="114.3"/>
+</segment>
+<segment>
+<pinref part="Q11" gate="G$1" pin="D@1"/>
+<wire x1="375.92" y1="289.56" x2="375.92" y2="251.46" width="0.1524" layer="91"/>
+<junction x="375.92" y="251.46"/>
+<pinref part="P+3" gate="1" pin="+5V"/>
 </segment>
 </net>
 <net name="GND" class="1">
@@ -11262,11 +11417,6 @@ These are standard SMD and PTH capacitors. Normally 10uF, 47uF, and 100uF in ele
 <label x="301.752" y="26.162" size="1.778" layer="95"/>
 <pinref part="GND27" gate="1" pin="GND"/>
 <wire x1="312.42" y1="25.4" x2="297.18" y2="25.4" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<wire x1="383.54" y1="287.02" x2="383.54" y2="289.56" width="0.1524" layer="91"/>
-<pinref part="GND2" gate="1" pin="GND"/>
-<pinref part="RGB-J2" gate="G$1" pin="6"/>
 </segment>
 <segment>
 <pinref part="Q7" gate="G$1" pin="S"/>
@@ -11695,11 +11845,6 @@ These are standard SMD and PTH capacitors. Normally 10uF, 47uF, and 100uF in ele
 <label x="295.402" y="33.782" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="370.84" y1="289.56" x2="370.84" y2="287.02" width="0.1524" layer="91"/>
-<pinref part="RGB-J2" gate="G$1" pin="1"/>
-<pinref part="P+3" gate="1" pin="+12V"/>
-</segment>
-<segment>
 <pinref part="IC4" gate="G$1" pin="VMB"/>
 <wire x1="561.34" y1="137.16" x2="561.34" y2="139.7" width="0.1524" layer="91"/>
 <pinref part="P+1" gate="1" pin="+12V"/>
@@ -12017,30 +12162,16 @@ These are standard SMD and PTH capacitors. Normally 10uF, 47uF, and 100uF in ele
 <junction x="332.74" y="251.46"/>
 </segment>
 </net>
-<net name="N$10" class="4">
-<segment>
-<pinref part="RGB-J2" gate="G$1" pin="3"/>
-<pinref part="Q11" gate="G$1" pin="D@1"/>
-<wire x1="375.92" y1="289.56" x2="375.92" y2="251.46" width="0.1524" layer="91"/>
-<junction x="375.92" y="251.46"/>
-</segment>
-</net>
 <net name="N$20" class="4">
 <segment>
-<pinref part="RGB-J2" gate="G$1" pin="2"/>
-<wire x1="373.38" y1="259.08" x2="373.38" y2="289.56" width="0.1524" layer="91"/>
 <pinref part="Q7" gate="G$1" pin="D@1"/>
-<wire x1="373.38" y1="259.08" x2="363.22" y2="259.08" width="0.1524" layer="91"/>
 <wire x1="363.22" y1="259.08" x2="363.22" y2="251.46" width="0.1524" layer="91"/>
 <junction x="363.22" y="251.46"/>
 </segment>
 </net>
 <net name="N$23" class="4">
 <segment>
-<pinref part="RGB-J2" gate="G$1" pin="4"/>
 <pinref part="Q12" gate="G$1" pin="D@1"/>
-<wire x1="378.46" y1="259.08" x2="378.46" y2="289.56" width="0.1524" layer="91"/>
-<wire x1="378.46" y1="259.08" x2="388.62" y2="259.08" width="0.1524" layer="91"/>
 <wire x1="388.62" y1="259.08" x2="388.62" y2="251.46" width="0.1524" layer="91"/>
 <junction x="388.62" y="251.46"/>
 </segment>
@@ -12253,6 +12384,52 @@ These are standard SMD and PTH capacitors. Normally 10uF, 47uF, and 100uF in ele
 <wire x1="563.88" y1="106.68" x2="563.88" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="563.88" y1="109.22" x2="571.5" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="JP3" gate="G$1" pin="3"/>
+</segment>
+</net>
+<net name="+5V1" class="2">
+<segment>
+<wire x1="434.34" y1="264.16" x2="444.5" y2="264.16" width="0.1524" layer="91"/>
+<pinref part="RGB_7-8-13" gate="G$1" pin="A2"/>
+<pinref part="P+2" gate="1" pin="+5V"/>
+</segment>
+</net>
+<net name="N$19" class="1">
+<segment>
+<wire x1="414.02" y1="259.08" x2="396.24" y2="259.08" width="0.1524" layer="91"/>
+<pinref part="RL8" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$21" class="1">
+<segment>
+<wire x1="414.02" y1="254" x2="403.86" y2="254" width="0.1524" layer="91"/>
+<pinref part="RL13" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$22" class="0">
+<segment>
+<wire x1="426.72" y1="264.16" x2="424.18" y2="264.16" width="0.1524" layer="91"/>
+<pinref part="RGB_7-8-13" gate="G$1" pin="CRED"/>
+<pinref part="RL2" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="N$24" class="0">
+<segment>
+<wire x1="426.72" y1="259.08" x2="424.18" y2="259.08" width="0.1524" layer="91"/>
+<pinref part="RGB_7-8-13" gate="G$1" pin="CBLUE"/>
+<pinref part="RL8" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="N$25" class="0">
+<segment>
+<wire x1="426.72" y1="254" x2="424.18" y2="254" width="0.1524" layer="91"/>
+<pinref part="RGB_7-8-13" gate="G$1" pin="CGREEN"/>
+<pinref part="RL13" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="N$26" class="1">
+<segment>
+<wire x1="414.02" y1="264.16" x2="403.86" y2="264.16" width="0.1524" layer="91"/>
+<pinref part="RL2" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>
